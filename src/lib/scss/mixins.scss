@@ -1,0 +1,3 @@
+@mixin level($level){
+    background: rgba($colorOnSurface, $level * 0.04);
+}

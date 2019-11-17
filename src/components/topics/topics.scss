@@ -1,0 +1,70 @@
+@import "../../lib/scss/main.scss";
+
+.main{
+    width: 87.84%;
+    height: auto;
+    display: flex;
+    position: relative;
+
+    .main__section{
+        width: 100%;
+        height: auto;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &.flex_end{
+            justify-content: flex-end;
+        }
+    }
+}
+
+.button{
+    width: auto;
+    height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 2px solid darken($primaryColor, 10);
+    outline: none;
+    
+    color: $colorOnPrimary;
+    font-size: 1em;
+
+    background: $primaryColor;
+
+    cursor: pointer;
+
+    transition-property: background, transform, box-shadow;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+
+    &:hover{
+        background: darken($primaryColor, 10);
+        transform: translateY(-4px) scale(1.05);
+    }
+    &:active{
+        background: $primaryColor;
+        box-shadow: 0px -2px 4px rgba(0,0,0,0.5) inset;
+    }
+}
+
+.topics-list{
+    width: calc(100% / 12 * 3 - 10px);
+    height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    li{
+        color: $colorOnSurface;
+    }
+}

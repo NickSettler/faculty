@@ -1,0 +1,63 @@
+@import "../../lib/scss/main.scss";
+
+body{
+    margin: 0;
+    background: #121212;
+}
+.main{
+    width: 87.84%;
+    height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    .main__section{
+        width: 100%;
+        height: auto;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.card{
+    width: auto;
+    height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    @include level(2);
+    box-shadow: 0px 2px 4px rgba($colorOnSurface, 0.12);
+
+    &.card_stats{
+        width: calc((100% / 12 * 3) - 10px);
+    }
+    &.card_graph{
+        width: calc((100% / 12 * 9) - 10px);
+    }
+
+    .card__title{
+        margin: 0;
+        padding: 0;
+
+        color: $colorOnSurface;
+        font-size: 1.25em;
+    }
+}
+
+.text_positive{
+    color: $positiveColor;
+}
+
+.text_important{
+    font-size: 4em;
+    font-weight: bold;
+}
